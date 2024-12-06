@@ -1,0 +1,425 @@
+Análisis del Perfil de las Series de Enero 2024
+--------------------------------------------------
+Resumen de estadísticas:
+                 id       season      number     runtime  image  \
+count  1.890000e+02   189.000000  188.000000  162.000000    0.0   
+mean   2.735519e+06   163.264550   15.250000   46.203704    NaN   
+std    5.806877e+04   547.803014   42.425225   44.568900    NaN   
+min    2.625941e+06     1.000000    1.000000    2.000000    NaN   
+25%    2.712160e+06     1.000000    2.000000   22.000000    NaN   
+50%    2.725231e+06     1.000000    6.000000   39.000000    NaN   
+75%    2.731469e+06     2.000000   13.000000   52.000000    NaN   
+max    3.045036e+06  2024.000000  378.000000  300.000000    NaN   
+
+       rating.average  _embedded.show.id  _embedded.show.runtime  \
+count       19.000000         189.000000               19.000000   
+mean         7.431579       62352.862434               90.368421   
+std          0.749854       19540.751716               89.114290   
+min          6.000000         793.000000               10.000000   
+25%          6.900000       59484.000000               16.000000   
+50%          7.400000       72871.000000               70.000000   
+75%          7.800000       73703.000000              120.000000   
+max          9.000000       79903.000000              300.000000   
+
+       _embedded.show.averageRuntime  _embedded.show.rating.average  \
+count                     164.000000                      43.000000   
+mean                       45.664634                       6.739535   
+std                        43.370465                       0.554694   
+min                         2.000000                       4.800000   
+25%                        22.000000                       6.600000   
+50%                        39.000000                       6.700000   
+75%                        50.000000                       7.100000   
+max                       300.000000                       7.900000   
+
+       _embedded.show.weight  _embedded.show.network  \
+count             189.000000                     0.0   
+mean               33.703704                     NaN   
+std                31.778439                     NaN   
+min                 0.000000                     NaN   
+25%                 6.000000                     NaN   
+50%                23.000000                     NaN   
+75%                56.000000                     NaN   
+max                97.000000                     NaN   
+
+       _embedded.show.webChannel.id  _embedded.show.externals.tvrage  \
+count                    187.000000                         10.00000   
+mean                     219.459893                      16988.40000   
+std                      194.935783                      15030.82912   
+min                        1.000000                        712.00000   
+25%                       26.000000                       3296.50000   
+50%                      149.000000                      17105.00000   
+75%                      366.000000                      30295.00000   
+max                      643.000000                      34149.00000   
+
+       _embedded.show.externals.thetvdb  _embedded.show.updated  \
+count                         98.000000            1.890000e+02   
+mean                      393293.255102            1.713758e+09   
+std                        96487.319506            1.091840e+07   
+min                        70366.000000            1.701777e+09   
+25%                       395919.000000            1.704633e+09   
+50%                       433681.000000            1.708156e+09   
+75%                       444072.000000            1.725226e+09   
+max                       448382.000000            1.733444e+09   
+
+       _embedded.show.image  _embedded.show.network.id  \
+count                   0.0                   9.000000   
+mean                    NaN                 502.000000   
+std                     NaN                 471.455989   
+min                     NaN                  30.000000   
+25%                     NaN                 166.000000   
+50%                     NaN                 426.000000   
+75%                     NaN                 481.000000   
+max                     NaN                1282.000000   
+
+       _embedded.show.webChannel  _embedded.show.webChannel.country  
+count                        0.0                                0.0  
+mean                         NaN                                NaN  
+std                          NaN                                NaN  
+min                          NaN                                NaN  
+25%                          NaN                                NaN  
+50%                          NaN                                NaN  
+75%                          NaN                                NaN  
+max                          NaN                                NaN  
+Correlación entre columnas numéricas:
+                                         id    season    number   runtime  \
+id                                 1.000000  0.482569 -0.085786  0.300994   
+season                             0.482569  1.000000 -0.099100  0.647936   
+number                            -0.085786 -0.099100  1.000000 -0.067419   
+runtime                            0.300994  0.647936 -0.067419  1.000000   
+image                                   NaN       NaN       NaN       NaN   
+rating.average                    -0.431258  0.214674 -0.261463  0.654567   
+_embedded.show.id                  0.184102 -0.030926 -0.035226  0.015190   
+_embedded.show.runtime             0.250360  0.677388 -0.312238  0.988482   
+_embedded.show.averageRuntime      0.308514  0.642383 -0.111791  0.985412   
+_embedded.show.rating.average     -0.417332  0.048513  0.221450  0.297506   
+_embedded.show.weight             -0.275300 -0.083305  0.125877 -0.002688   
+_embedded.show.network                  NaN       NaN       NaN       NaN   
+_embedded.show.webChannel.id       0.313717  0.277911 -0.102181  0.312590   
+_embedded.show.externals.tvrage   -0.049572 -0.485012 -0.186492 -0.092490   
+_embedded.show.externals.thetvdb   0.102310 -0.353189 -0.020564 -0.159404   
+_embedded.show.updated             0.147480  0.302296  0.206482  0.250666   
+_embedded.show.image                    NaN       NaN       NaN       NaN   
+_embedded.show.network.id          0.166579 -0.472957  0.259855 -0.569263   
+_embedded.show.webChannel               NaN       NaN       NaN       NaN   
+_embedded.show.webChannel.country       NaN       NaN       NaN       NaN   
+
+                                   image  rating.average  _embedded.show.id  \
+id                                   NaN       -0.431258           0.184102   
+season                               NaN        0.214674          -0.030926   
+number                               NaN       -0.261463          -0.035226   
+runtime                              NaN        0.654567           0.015190   
+image                                NaN             NaN                NaN   
+rating.average                       NaN        1.000000          -0.375509   
+_embedded.show.id                    NaN       -0.375509           1.000000   
+_embedded.show.runtime               NaN             NaN           0.135664   
+_embedded.show.averageRuntime        NaN        0.633009          -0.023870   
+_embedded.show.rating.average        NaN        0.867880          -0.053460   
+_embedded.show.weight                NaN       -0.394838          -0.505363   
+_embedded.show.network               NaN             NaN                NaN   
+_embedded.show.webChannel.id         NaN       -0.037558           0.007510   
+_embedded.show.externals.tvrage      NaN       -1.000000           0.120103   
+_embedded.show.externals.thetvdb     NaN       -0.338087           0.908722   
+_embedded.show.updated               NaN       -0.088190          -0.360429   
+_embedded.show.image                 NaN             NaN                NaN   
+_embedded.show.network.id            NaN             NaN           0.509705   
+_embedded.show.webChannel            NaN             NaN                NaN   
+_embedded.show.webChannel.country    NaN             NaN                NaN   
+
+                                   _embedded.show.runtime  \
+id                                               0.250360   
+season                                           0.677388   
+number                                          -0.312238   
+runtime                                          0.988482   
+image                                                 NaN   
+rating.average                                        NaN   
+_embedded.show.id                                0.135664   
+_embedded.show.runtime                           1.000000   
+_embedded.show.averageRuntime                    0.988061   
+_embedded.show.rating.average                    0.475711   
+_embedded.show.weight                           -0.144858   
+_embedded.show.network                                NaN   
+_embedded.show.webChannel.id                     0.298215   
+_embedded.show.externals.tvrage                 -1.000000   
+_embedded.show.externals.thetvdb                -0.308176   
+_embedded.show.updated                           0.007062   
+_embedded.show.image                                  NaN   
+_embedded.show.network.id                       -0.894257   
+_embedded.show.webChannel                             NaN   
+_embedded.show.webChannel.country                     NaN   
+
+                                   _embedded.show.averageRuntime  \
+id                                                      0.308514   
+season                                                  0.642383   
+number                                                 -0.111791   
+runtime                                                 0.985412   
+image                                                        NaN   
+rating.average                                          0.633009   
+_embedded.show.id                                      -0.023870   
+_embedded.show.runtime                                  0.988061   
+_embedded.show.averageRuntime                           1.000000   
+_embedded.show.rating.average                           0.268002   
+_embedded.show.weight                                   0.016538   
+_embedded.show.network                                       NaN   
+_embedded.show.webChannel.id                            0.302917   
+_embedded.show.externals.tvrage                        -0.120863   
+_embedded.show.externals.thetvdb                       -0.260764   
+_embedded.show.updated                                  0.245429   
+_embedded.show.image                                         NaN   
+_embedded.show.network.id                              -0.425337   
+_embedded.show.webChannel                                    NaN   
+_embedded.show.webChannel.country                            NaN   
+
+                                   _embedded.show.rating.average  \
+id                                                     -0.417332   
+season                                                  0.048513   
+number                                                  0.221450   
+runtime                                                 0.297506   
+image                                                        NaN   
+rating.average                                          0.867880   
+_embedded.show.id                                      -0.053460   
+_embedded.show.runtime                                  0.475711   
+_embedded.show.averageRuntime                           0.268002   
+_embedded.show.rating.average                           1.000000   
+_embedded.show.weight                                   0.237571   
+_embedded.show.network                                       NaN   
+_embedded.show.webChannel.id                           -0.302617   
+_embedded.show.externals.tvrage                        -0.197095   
+_embedded.show.externals.thetvdb                       -0.032406   
+_embedded.show.updated                                  0.407476   
+_embedded.show.image                                         NaN   
+_embedded.show.network.id                              -0.612371   
+_embedded.show.webChannel                                    NaN   
+_embedded.show.webChannel.country                            NaN   
+
+                                   _embedded.show.weight  \
+id                                             -0.275300   
+season                                         -0.083305   
+number                                          0.125877   
+runtime                                        -0.002688   
+image                                                NaN   
+rating.average                                 -0.394838   
+_embedded.show.id                              -0.505363   
+_embedded.show.runtime                         -0.144858   
+_embedded.show.averageRuntime                   0.016538   
+_embedded.show.rating.average                   0.237571   
+_embedded.show.weight                           1.000000   
+_embedded.show.network                               NaN   
+_embedded.show.webChannel.id                   -0.479080   
+_embedded.show.externals.tvrage                -0.701959   
+_embedded.show.externals.thetvdb               -0.435683   
+_embedded.show.updated                          0.553558   
+_embedded.show.image                                 NaN   
+_embedded.show.network.id                      -0.655931   
+_embedded.show.webChannel                            NaN   
+_embedded.show.webChannel.country                    NaN   
+
+                                   _embedded.show.network  \
+id                                                    NaN   
+season                                                NaN   
+number                                                NaN   
+runtime                                               NaN   
+image                                                 NaN   
+rating.average                                        NaN   
+_embedded.show.id                                     NaN   
+_embedded.show.runtime                                NaN   
+_embedded.show.averageRuntime                         NaN   
+_embedded.show.rating.average                         NaN   
+_embedded.show.weight                                 NaN   
+_embedded.show.network                                NaN   
+_embedded.show.webChannel.id                          NaN   
+_embedded.show.externals.tvrage                       NaN   
+_embedded.show.externals.thetvdb                      NaN   
+_embedded.show.updated                                NaN   
+_embedded.show.image                                  NaN   
+_embedded.show.network.id                             NaN   
+_embedded.show.webChannel                             NaN   
+_embedded.show.webChannel.country                     NaN   
+
+                                   _embedded.show.webChannel.id  \
+id                                                     0.313717   
+season                                                 0.277911   
+number                                                -0.102181   
+runtime                                                0.312590   
+image                                                       NaN   
+rating.average                                        -0.037558   
+_embedded.show.id                                      0.007510   
+_embedded.show.runtime                                 0.298215   
+_embedded.show.averageRuntime                          0.302917   
+_embedded.show.rating.average                         -0.302617   
+_embedded.show.weight                                 -0.479080   
+_embedded.show.network                                      NaN   
+_embedded.show.webChannel.id                           1.000000   
+_embedded.show.externals.tvrage                        0.575039   
+_embedded.show.externals.thetvdb                      -0.019803   
+_embedded.show.updated                                -0.236489   
+_embedded.show.image                                        NaN   
+_embedded.show.network.id                              0.267961   
+_embedded.show.webChannel                                   NaN   
+_embedded.show.webChannel.country                           NaN   
+
+                                   _embedded.show.externals.tvrage  \
+id                                                       -0.049572   
+season                                                   -0.485012   
+number                                                   -0.186492   
+runtime                                                  -0.092490   
+image                                                          NaN   
+rating.average                                           -1.000000   
+_embedded.show.id                                         0.120103   
+_embedded.show.runtime                                   -1.000000   
+_embedded.show.averageRuntime                            -0.120863   
+_embedded.show.rating.average                            -0.197095   
+_embedded.show.weight                                    -0.701959   
+_embedded.show.network                                         NaN   
+_embedded.show.webChannel.id                              0.575039   
+_embedded.show.externals.tvrage                           1.000000   
+_embedded.show.externals.thetvdb                          0.989700   
+_embedded.show.updated                                   -0.499970   
+_embedded.show.image                                           NaN   
+_embedded.show.network.id                                 1.000000   
+_embedded.show.webChannel                                      NaN   
+_embedded.show.webChannel.country                              NaN   
+
+                                   _embedded.show.externals.thetvdb  \
+id                                                         0.102310   
+season                                                    -0.353189   
+number                                                    -0.020564   
+runtime                                                   -0.159404   
+image                                                           NaN   
+rating.average                                            -0.338087   
+_embedded.show.id                                          0.908722   
+_embedded.show.runtime                                    -0.308176   
+_embedded.show.averageRuntime                             -0.260764   
+_embedded.show.rating.average                             -0.032406   
+_embedded.show.weight                                     -0.435683   
+_embedded.show.network                                          NaN   
+_embedded.show.webChannel.id                              -0.019803   
+_embedded.show.externals.tvrage                            0.989700   
+_embedded.show.externals.thetvdb                           1.000000   
+_embedded.show.updated                                    -0.504151   
+_embedded.show.image                                            NaN   
+_embedded.show.network.id                                  0.500002   
+_embedded.show.webChannel                                       NaN   
+_embedded.show.webChannel.country                               NaN   
+
+                                   _embedded.show.updated  \
+id                                               0.147480   
+season                                           0.302296   
+number                                           0.206482   
+runtime                                          0.250666   
+image                                                 NaN   
+rating.average                                  -0.088190   
+_embedded.show.id                               -0.360429   
+_embedded.show.runtime                           0.007062   
+_embedded.show.averageRuntime                    0.245429   
+_embedded.show.rating.average                    0.407476   
+_embedded.show.weight                            0.553558   
+_embedded.show.network                                NaN   
+_embedded.show.webChannel.id                    -0.236489   
+_embedded.show.externals.tvrage                 -0.499970   
+_embedded.show.externals.thetvdb                -0.504151   
+_embedded.show.updated                           1.000000   
+_embedded.show.image                                  NaN   
+_embedded.show.network.id                       -0.725539   
+_embedded.show.webChannel                             NaN   
+_embedded.show.webChannel.country                     NaN   
+
+                                   _embedded.show.image  \
+id                                                  NaN   
+season                                              NaN   
+number                                              NaN   
+runtime                                             NaN   
+image                                               NaN   
+rating.average                                      NaN   
+_embedded.show.id                                   NaN   
+_embedded.show.runtime                              NaN   
+_embedded.show.averageRuntime                       NaN   
+_embedded.show.rating.average                       NaN   
+_embedded.show.weight                               NaN   
+_embedded.show.network                              NaN   
+_embedded.show.webChannel.id                        NaN   
+_embedded.show.externals.tvrage                     NaN   
+_embedded.show.externals.thetvdb                    NaN   
+_embedded.show.updated                              NaN   
+_embedded.show.image                                NaN   
+_embedded.show.network.id                           NaN   
+_embedded.show.webChannel                           NaN   
+_embedded.show.webChannel.country                   NaN   
+
+                                   _embedded.show.network.id  \
+id                                                  0.166579   
+season                                             -0.472957   
+number                                              0.259855   
+runtime                                            -0.569263   
+image                                                    NaN   
+rating.average                                           NaN   
+_embedded.show.id                                   0.509705   
+_embedded.show.runtime                             -0.894257   
+_embedded.show.averageRuntime                      -0.425337   
+_embedded.show.rating.average                      -0.612371   
+_embedded.show.weight                              -0.655931   
+_embedded.show.network                                   NaN   
+_embedded.show.webChannel.id                        0.267961   
+_embedded.show.externals.tvrage                     1.000000   
+_embedded.show.externals.thetvdb                    0.500002   
+_embedded.show.updated                             -0.725539   
+_embedded.show.image                                     NaN   
+_embedded.show.network.id                           1.000000   
+_embedded.show.webChannel                                NaN   
+_embedded.show.webChannel.country                        NaN   
+
+                                   _embedded.show.webChannel  \
+id                                                       NaN   
+season                                                   NaN   
+number                                                   NaN   
+runtime                                                  NaN   
+image                                                    NaN   
+rating.average                                           NaN   
+_embedded.show.id                                        NaN   
+_embedded.show.runtime                                   NaN   
+_embedded.show.averageRuntime                            NaN   
+_embedded.show.rating.average                            NaN   
+_embedded.show.weight                                    NaN   
+_embedded.show.network                                   NaN   
+_embedded.show.webChannel.id                             NaN   
+_embedded.show.externals.tvrage                          NaN   
+_embedded.show.externals.thetvdb                         NaN   
+_embedded.show.updated                                   NaN   
+_embedded.show.image                                     NaN   
+_embedded.show.network.id                                NaN   
+_embedded.show.webChannel                                NaN   
+_embedded.show.webChannel.country                        NaN   
+
+                                   _embedded.show.webChannel.country  
+id                                                               NaN  
+season                                                           NaN  
+number                                                           NaN  
+runtime                                                          NaN  
+image                                                            NaN  
+rating.average                                                   NaN  
+_embedded.show.id                                                NaN  
+_embedded.show.runtime                                           NaN  
+_embedded.show.averageRuntime                                    NaN  
+_embedded.show.rating.average                                    NaN  
+_embedded.show.weight                                            NaN  
+_embedded.show.network                                           NaN  
+_embedded.show.webChannel.id                                     NaN  
+_embedded.show.externals.tvrage                                  NaN  
+_embedded.show.externals.thetvdb                                 NaN  
+_embedded.show.updated                                           NaN  
+_embedded.show.image                                             NaN  
+_embedded.show.network.id                                        NaN  
+_embedded.show.webChannel                                        NaN  
+_embedded.show.webChannel.country                                NaN  
+Distribución de valores nulos:
+id                                           0
+url                                          0
+name                                         0
+season                                       0
+number                                       1
+                                          ... 
+_embedded.show.network.country.code        180
+_embedded.show.network.country.timezone    180
+_embedded.show.network.officialSite        188
+_embedded.show.webChannel                  189
+_embedded.show.webChannel.country          189
+Length: 63, dtype: int64
